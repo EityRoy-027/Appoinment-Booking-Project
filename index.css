@@ -1,0 +1,243 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body{
+   
+    background:linear-gradient(135deg, #667eea 0%, #764ba2 100%)
+}
+#maincontainer{
+  max-width: 1920px;
+width:100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.header{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  
+  height:100px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+.header h2{
+  margin-top: 20px;
+  color: white;
+}
+.header p{
+font-size: 0.7rem;
+color: white;
+}
+.monthcontainer{
+    width:60%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-color: white;
+}
+.monthcontainerbox{
+width:100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+
+
+}
+.monthtop{
+  margin-top: 40px;
+ width:100%;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+gap: 20px;
+border-bottom: 1px solid rgb(215, 212, 212);
+padding-bottom: 30px;
+
+}
+
+.date{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;  
+gap: 10px;
+
+
+}
+.scale{
+     width:120px;
+    height:2px;
+    background-color: silver;
+}
+.scale1{
+    width:90px;
+    height:2px;
+    background-color: rgb(13, 83, 181);
+}
+.scale1{
+    width:90px;
+    height:2px;
+    background-color: rgb(73, 73, 75);
+   
+}
+.circle1{
+   width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    color: white;
+}
+.circle{
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(31, 31, 31, 0.432);
+    color: white;
+} 
+.title{
+  font-size: 0.75rem;
+}
+.selectdate{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 25px;
+
+}
+.selectdate p{
+  font-size:0.88em ;
+  color: rgb(107, 106, 106);
+}
+.calender{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 25px;
+  
+}
+.calendertop{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.topmonth{
+  font-weight: bold;
+}
+.arrow{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.before,.after{
+  width:40px;
+  height:40px;
+  border-radius: 5px;
+  background-color: aliceblue;
+  color: rgb(84, 82, 82);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calenderbox{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: center;
+ align-items: center;
+ margin-top: 20px;
+}
+.days{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  
+   font-size: 0.8rem;
+   color: rgb(89, 89, 109);
+   padding: 10px;
+}
+.rows{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:35px;
+  margin-top: 20px;
+  padding: 10px;
+}
+.first{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+   gap:45px;
+   font-size: 0.8rem;
+   color: rgb(89, 89, 109);
+   justify-content: flex-end;
+   align-items:center;
+  
+}
+.second{
+   width: 100%;
+  display: flex;
+  flex-direction: row;
+ 
+   font-size: 0.8rem;
+   color: rgb(89, 89, 109);
+   justify-content: space-around;
+   align-items: center;
+}
+.one{
+  width:75px;
+  height: 65px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+}
+.continuebut{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.continue{
+  width:90%;
+  height:40px;
+  border-radius: 5px;
+  background-color: rgb(39, 117, 165);
+  border: none;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
