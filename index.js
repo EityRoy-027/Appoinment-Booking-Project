@@ -14,7 +14,7 @@ let calendernovember=document.querySelector('#calendernovember');
 let calenderdecember=document.querySelector('#calenderdecember');
 let count=0;
 let calenderbox=document.querySelectorAll('.calenderbox');
-let conti=document.querySelectorAll('.continue');
+let conti=document.querySelector('#continue');
 let one=document.querySelectorAll('.one');
 let timeslot=document.querySelector('#timeslot');
  let circle1=document.querySelector('#circle1');
@@ -25,7 +25,11 @@ let apm=document.querySelectorAll('.apm');
 let conti2=document.querySelector('#conti');
 let infor=document.querySelector('#information');
 let book=document.querySelector('#book');
-let confirm=document.querySelector('#confirm');
+let confirms=document.querySelector('#confirm');
+let another=document.querySelector('#another');
+let back1=document.querySelector('#back1');
+let back2=document.querySelector('#back2');
+let maincalenderbox=document.querySelector('#maincalenderbox');
 
 
 for(let i=0;i<after.length;i++){
@@ -297,27 +301,27 @@ one[i].addEventListener('click',function(){
     one[i].style.backgroundColor='rgb(39, 117, 165)';
     one[i].style.color='rgb(250, 250, 250)';
 
-    for(let i=0;i<conti.length;i++){
-        conti[i].style.backgroundColor='rgb(39, 117, 165)';
+    // for(let i=0;i<conti.length;i++){
+        conti.style.backgroundColor='rgb(39, 117, 165)';
         console.log(conti);
 
-        conti[i].addEventListener('click',function(){
-    timeslot.style.display='block';
-    calender.style.display='none';
-    circle1.style.backgroundColor='rgba(28, 197, 39, 0.43)';
-    circle2.style.backgroundColor='blue';
-    conti[i].style.display='none';
-
-
     
-        })
-    }
     
     
 })
 
 }
 
+   conti.addEventListener('click',function(){
+    timeslot.style.display='flex';
+    maincalenderbox.style.display='none';
+    circle1.style.backgroundColor='rgba(28, 197, 39, 0.43)';
+    circle2.style.backgroundColor='blue';
+ 
+
+
+    
+        })
 
 for(let i=0;i<apm.length;i++){
     apm[i].addEventListener('click',function(){
@@ -326,7 +330,7 @@ for(let i=0;i<apm.length;i++){
 
           conti2.addEventListener('click',function(){
             timeslot.style.display='none';
-            infor.style.display='block';
+            infor.style.display='flex';
             circle1.style.backgroundColor='rgba(21, 211, 4, 0.43)';
              circle2.style.backgroundColor='rgba(36, 198, 7, 0.43)';
     circle3.style.backgroundColor='blue';
@@ -336,9 +340,36 @@ for(let i=0;i<apm.length;i++){
 
 book.addEventListener('click',function(){
     infor.style.display='none';
-    confirm.style.display='block';
+    confirms.style.display='flex';
        circle1.style.backgroundColor='rgba(21, 211, 4, 0.43)';
              circle2.style.backgroundColor='rgba(36, 198, 7, 0.43)';
     circle3.style.backgroundColor='rgba(36, 198, 7, 0.43)';
     circle4.style.backgroundColor='blue';
+})
+
+
+ back1.addEventListener('click',function(){
+
+  timeslot.style.display='none';
+ maincalenderbox.style.display='block';
+  circle1.style.backgroundColor='blue';
+   circle2.style.backgroundColor='rgba(31, 31, 31, 0.432)';
+
+    })
+
+
+   back2.addEventListener('click',function(){
+
+  timeslot.style.display='flex';
+ infor.style.display='none';
+  circle2.style.backgroundColor='blue';
+   circle3.style.backgroundColor='rgba(31, 31, 31, 0.432)';
+
+    })    
+
+another.addEventListener('click',function(){
+  
+    // maincalenderbox.style.display='flex';
+    timeslot.style.display='none';
+ infor.style.display='none';
 })

@@ -144,6 +144,10 @@ display: none;
   
  
 }
+#maincontainerbox{
+  width:100%;
+
+}
 .calender{
  
   display: flex;
@@ -152,7 +156,7 @@ display: none;
   padding: 25px;
   position: relative;
   height:650px;
-  /* display: none; */
+  /* display: none;  */
   
 }
 .calenderfeb,.calendermarch,.calenderapril,.calendermay,.calenderjune,.calenderjuly,.calenderaugust,.calenderseptember,.calenderoctober,.calendernovember,.calenderdecember{
@@ -263,12 +267,13 @@ display: none;
   background-color: white;
 }
 .continuebut{
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 10px;
 }
-.continue{
+#continue{
   width:90%;
   height:40px;
   border-radius: 5px;
@@ -277,6 +282,7 @@ display: none;
   color: white;
   font-size: 0.75rem;
   font-weight: bold;
+  
 
 }
 .timeslot{
@@ -363,7 +369,7 @@ display: none;
     padding-left: 25px;
  padding-right: 25px;
 }
-#back{
+.back{
   width:200px;
   height:35px;
   font-weight: bold;
