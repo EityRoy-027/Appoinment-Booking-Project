@@ -67,18 +67,20 @@ display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
-gap: 20px;
+gap: 10px;
 border-bottom: 1px solid rgb(215, 212, 212);
 padding-bottom: 30px;
+
 
 }
 
 .date{
 display: flex;
-flex-direction: row;
+flex-direction: column;
 justify-content: center;
 align-items: center;  
 gap: 10px;
+
 
 
 }
@@ -86,6 +88,7 @@ gap: 10px;
      width:120px;
     height:2px;
     background-color: silver;
+    margin-top: 10px;
 }
 .scale1{
     width:90px;
@@ -120,31 +123,55 @@ gap: 10px;
 } 
 .title{
   font-size: 0.75rem;
+
 }
 .selectdate{
   margin-top: 30px;
   display: flex;
   flex-direction: column;
+
   gap: 10px;
   padding: 25px;
-
+display: none;
 }
 .selectdate p{
   font-size:0.88em ;
   color: rgb(107, 106, 106);
 }
+.startdate{
+  display: flex;
+  flex-direction: row;
+  
+ 
+}
 .calender{
-  margin-top: 30px;
+ 
+  display: flex;
+  flex-direction: column;
+  
+  padding: 25px;
+  position: relative;
+  height:650px;
+  /* display: none; */
+  
+}
+.calenderfeb,.calendermarch,.calenderapril,.calendermay,.calenderjune,.calenderjuly,.calenderaugust,.calenderseptember,.calenderoctober,.calendernovember,.calenderdecember{
+ 
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 25px;
-  
+  position: relative;
+  display: none;
 }
 .calendertop{
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  
 }
 .topmonth{
   font-weight: bold;
@@ -168,23 +195,25 @@ gap: 10px;
 }
 .calenderbox{
   display: flex;
-  flex-direction: column;
-  padding: 10px;
-  justify-content: center;
- align-items: center;
- margin-top: 20px;
+  flex-direction: row;
+   width: 100%;
+
+    justify-content: space-between;
+  margin-top: 20px;
+  
 }
 .days{
-  width: 100%;
+ 
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+ 
   align-items: center;
+  gap: 30px;
+  font-size: 0.8rem;
+  color: rgb(89, 89, 109);
   
-   font-size: 0.8rem;
-   color: rgb(89, 89, 109);
-   padding: 10px;
 }
+
 .rows{
   width: 100%;
   display: flex;
@@ -199,31 +228,39 @@ gap: 10px;
   width: 100%;
   display: flex;
   flex-direction: row;
-   gap:45px;
-   font-size: 0.8rem;
-   color: rgb(89, 89, 109);
-   justify-content: flex-end;
-   align-items:center;
+  gap:45px;
+  font-size: 0.8rem;
+  color: rgb(89, 89, 109);
+  justify-content: flex-end;
+  align-items:center;
   
 }
 .second{
-   width: 100%;
+  width: 100%;
   display: flex;
   flex-direction: row;
- 
-   font-size: 0.8rem;
-   color: rgb(89, 89, 109);
-   justify-content: space-around;
-   align-items: center;
+  font-size: 0.8rem;
+  color: rgb(89, 89, 109);
+  justify-content: space-around;
+  align-items: center;
 }
 .one{
-  width:75px;
-  height: 65px;
+  width:80px;
+  height: 70px;
   border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: aliceblue;
+}
+.empty{
+  width:80px;
+  height: 70px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
 }
 .continuebut{
   display: flex;
@@ -235,9 +272,330 @@ gap: 10px;
   width:90%;
   height:40px;
   border-radius: 5px;
-  background-color: rgb(39, 117, 165);
+  background-color: rgb(206, 230, 243);
   border: none;
   color: white;
   font-size: 0.75rem;
+  font-weight: bold;
+
+}
+.timeslot{
+  width:100%;
+  height:450px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:35px;
+  padding-left: 15px;
+ padding-right: 15px;
+ display: none;
+}
+
+.choosetime{
+    width: 90%;
+   display: flex;
+  flex-direction: column;
+  gap:10px;
+
+}
+.choose{
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.preffered{
+  font-size: 0.85rem;
+  color: rgb(54, 54, 54);
+}
+.selectdates{
+     width: 92%;
+   display: flex;
+  flex-direction: row;
+  gap:10px;
+  justify-content: space-between;
+  align-items: center;
+
+ height:80px;
+ border-radius: 10px;
+ background-color:aliceblue;
+  padding-left: 10px;
+ padding-right: 10px;
+  font-size:0.78rem;
+}
+.select{
+ color: rgb(70, 70, 70);
+}
+.daydate{
+  font-weight: bold;
+  color: rgb(43, 42, 42);
+}
+.times{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+    padding-left: 25px;
+ padding-right: 25px;
+ height:auto;
+ gap:10px;
+}
+.timesrow1,.timesrow2,.timesrow3{
+  display:flex;
+  flex-direction: row;
+  gap:10px;
+}
+.apm{
+  width:85px;
+  height:40px;
+  border-radius: 5px;
+  border:1px solid rgb(218, 214, 214);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:10px;
+  font-size: 0.88rem;
+}
+.timesbut,.servicebut{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+    padding-left: 25px;
+ padding-right: 25px;
+}
+#back{
+  width:200px;
+  height:35px;
+  font-weight: bold;
+  color: rgb(42, 41, 41);
+  border: none;
+  background-color: aliceblue;
+  font-size: 0.75rem;
+  border-radius: 5px;
+}
+#conti,#book{
+  width:250px;
+  height:35px;
+  font-weight: bold;
+  color: rgb(245, 241, 241);
+  border: none;
+  background-color: rgb(159, 165, 177);
+  font-size: 0.75rem;
+  border-radius: 5px;
+
+}
+#book{
+  background-color: rgb(50, 105, 176);
+}
+.informations{
+  width:100%;
+  height:850px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ 
+  gap:35px;
+  padding-left: 25px;
+ padding-right: 25px;
+ display: none;
+}
+.info{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap:10px;
+
+}
+.info h4{
+  font-size: 1.2rem;
+}
+.info p{
+  font-size: 0.88rem;
+  color: rgb(56, 56, 56);
+}
+.apposummary{
+  width:100%;
+  height:150px;
+  background-color: aliceblue;
+  border-radius: 10px;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding:25px;
+}
+.appohead{
+  margin-bottom: 40px;
+  font-size: 0.95rem;
+}
+.appodatetime{
+  width:100%;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+ 
+}
+.appodate1,.appodate2{
+  
+  display: flex;
+  flex-direction: column;
+  gap:25px;
+}
+.appodate1 p{
+  color:rgb(80, 79, 79);
+  font-size: 0.9rem;
+}
+.appodate2 {
+font-size: 0.89rem;
+font-weight: bold;
+}
+.services{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+   font-size: 0.88rem;
+   color:rgb(18, 17, 17)
+}
+.serviceinfos{
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+  font-size: 0.88rem;
+}
+.servicesel,.serviceemail{
+  width:100%;
+  
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+}
+.sel,.sermail{
+  width:100%;
+  height:40px;
+  border:1px solid silver;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  padding-left: 10px;
+}
+#servitext{
+   width:100%;
+ 
+  border:1px solid rgb(77, 76, 76);
+  border-radius: 5px;
+  font-size: 0.75rem;
+  padding-left: 10px;
+}
+
+.confirmation{
+  margin-top: 40px;
+  width:100%;
+  height:560px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:35px;
+  padding-left: 25px;
+ padding-right: 25px;
+ display: none;
+
+}
+.concircle{
+  height:60px;
+  width:60px;
+  border-radius: 50px;
+  background-color: rgb(8, 214, 32);
+}
+.confirmhead{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap:10px;
+}
+.confirmhead p{
+font-size: 0.88rem;
+color:rgb(82, 81, 81);
+
+}
+.confirmbox{
+  margin-top: 25px;
+  width:100%;
+  height:260px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 15px;
+  gap:20px;
+  font-size: 0.88rem;
+  background-color: aliceblue;
+}
+.health{
+  display:flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-bottom: 1px solid silver;
+  padding-bottom: 10px;
+  
+}
+.healthp{
+   display:flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
+ 
+}
+.health #p1{
+  color:rgb(86, 86, 86);
+}
+.healthp #p1{
+    color:rgb(86, 86, 86);
+}
+.healthp #p2{
+   font-weight: bold;
+  font-size: 0.85rem;
+}
+.health #p2{
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+.calenderbut{
+  display: flex;
+  flex-direction: row;
+  gap:10px;
+}
+.add{
+  width:130px;
+  height:35px;
+  border-radius: 5px;
+  border:1px solid rgb(190, 189, 189);
+  font-size: 0.65rem;
+  color:black;
+}
+.anotherbut{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#another{
+  width:90%;
+  height:40px;
+  background-color: #5f78e9;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  color: white;
   font-weight: bold;
 }
