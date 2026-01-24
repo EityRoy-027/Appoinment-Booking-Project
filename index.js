@@ -29,7 +29,23 @@ let confirms=document.querySelector('#confirm');
 let another=document.querySelector('#another');
 let back1=document.querySelector('#back1');
 let back2=document.querySelector('#back2');
+let name1=document.querySelector('#name');
+let email=document.querySelector('#email');
+let phone=document.querySelector('#phone');
+let servitext=document.querySelector('#servitext');
+let tp = document.querySelector("#tp") ;
+let eip = document.querySelector("#eip");
+let pp1 = document.querySelector("#pp1");
+let ep1 = document.querySelector("#ep1");
 let maincalenderbox=document.querySelector('#maincalenderbox');
+let database={
+    'date':'',
+    'time':'',
+    'type':'',
+    'name':'',
+    'email':'',
+    'phone':'',
+}
 
 
 for(let i=0;i<after.length;i++){
@@ -306,22 +322,23 @@ one[i].addEventListener('click',function(){
         console.log(conti);
 
     
+      conti.addEventListener('click',function(){
+    timeslot.style.display='flex';
+    maincalenderbox.style.display='none';
+    circle1.style.backgroundColor='rgba(28, 197, 39, 0.43)';
+    circle2.style.backgroundColor='blue';
+    let date=one[i].parentElement.firstElementChild.textContent+', '+one[i].textContent+', '+one[i].parentElement.parentElement.parentElement.firstElementChild.firstElementChild.textContent;
+       
+    localStorage.setItem('date',date);
+    document.querySelector("#daydate").textContent = localStorage.getItem("date");
     
+        })
     
 })
 
 }
 
-   conti.addEventListener('click',function(){
-    timeslot.style.display='flex';
-    maincalenderbox.style.display='none';
-    circle1.style.backgroundColor='rgba(28, 197, 39, 0.43)';
-    circle2.style.backgroundColor='blue';
  
-
-
-    
-        })
 
 for(let i=0;i<apm.length;i++){
     apm[i].addEventListener('click',function(){
@@ -333,7 +350,14 @@ for(let i=0;i<apm.length;i++){
             infor.style.display='flex';
             circle1.style.backgroundColor='rgba(21, 211, 4, 0.43)';
              circle2.style.backgroundColor='rgba(36, 198, 7, 0.43)';
-    circle3.style.backgroundColor='blue';
+
+             
+      circle3.style.backgroundColor='blue';
+      let time=apm[i].textContent;
+      localStorage.setItem('time',time);
+      document.querySelector('#timeh').textContent=localStorage.getItem('date');
+
+      document.querySelector('#timep').textContent=localStorage.getItem('time');
           })
     })
 }
@@ -345,6 +369,21 @@ book.addEventListener('click',function(){
              circle2.style.backgroundColor='rgba(36, 198, 7, 0.43)';
     circle3.style.backgroundColor='rgba(36, 198, 7, 0.43)';
     circle4.style.backgroundColor='blue';
+   
+    localStorage.setItem('name', name1.value);
+      localStorage.setItem('email', email.value);
+        localStorage.setItem('phone', phone.value);
+          localStorage.setItem('servitext', servitext.value);
+
+    tp.textContent=localStorage.getItem('date');
+    eip.textContent=localStorage.getItem('name');
+    ep1.textContent=localStorage.getItem('email');
+    pp1.textContent=localStorage.getItem('phone');
+
+
+          
+
+
 })
 
 
@@ -369,7 +408,12 @@ book.addEventListener('click',function(){
 
 another.addEventListener('click',function(){
   
-    // maincalenderbox.style.display='flex';
+    maincalenderbox.style.display='block';
     timeslot.style.display='none';
  infor.style.display='none';
+ confirms.style.display='none';
 })
+
+if(confirms){
+    console.log('Eity');
+}
